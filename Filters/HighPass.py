@@ -3,8 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 def high_pass_filter(image_path, radius=20):
 	f = cv2.imread(image_path, 0)
-	#plt.imshow(f)
-	# convert from spatial domain to frequency domain using fft
+	
 	F = np.fft.fft2(f)
 
 	plt.figure(figsize=(10,10))
